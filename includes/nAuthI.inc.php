@@ -2,7 +2,7 @@
 /*
  * Login mechanism for educational purposes.
  * Experimental
- * Copyright nml, 2015
+ * Copyright nml, 2015-17
  */
 
 /**
@@ -10,9 +10,9 @@
  * @author nml
  */
 interface nAuthI {
-    public static function authenticate($user, $pwd);
-    public static function isAuthenticated();
     public static function areCookiesEnabled();
+    public static function authenticate($user, $pwd);
     public static function dbLookUp($user, $passwordattempt);
+    public static function isAuthenticated();
     public static function logout();
 }

@@ -1,6 +1,6 @@
 <?php
 
-class DbH {
+class DbH extends DbP {
     private static $instance = FALSE;
     private static $dbh;
 
