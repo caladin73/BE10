@@ -47,7 +47,7 @@ class Authentication implements nAuthI {
     }
 
     public static function areCookiesEnabled() {
-      self::setTestCookie();
+      //self::setTestCookie();
       return (isset($_COOKIE['foo']) && $_COOKIE['foo'] == 'bar') ? true : false;
     }
 
