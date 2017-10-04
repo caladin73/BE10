@@ -4,7 +4,7 @@ require_once 'includes/DbH.inc.php';
 require_once 'includes/ModelIf.inc.php';
 require_once 'includes/ModelA.inc.php';
 
-class Country extends Model {
+class Country extends Model implements ModelIf {
     private $code;
 
     public function __construct($code) {
@@ -15,7 +15,9 @@ class Country extends Model {
         return $this->code;
     }
 
-    public function create() {}
+    public function create() {
+        // your code goes here
+    }
     public function update() {}
     public function delete() {}
 }
