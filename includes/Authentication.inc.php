@@ -11,12 +11,12 @@
  * It is instantiated by Authentication::authenticate()
  * @author nml
  */
-require_once './includes/nAuthA.inc.php';
+require_once './includes/AuthA.inc.php';
 
 
-class Authentication extends nAuthA {
+class Authentication extends AuthA {
 
-    private function __construct($user, $pwd) {
+    protected function __construct($user, $pwd) {
         parent::__construct($user);
         try {
             self::dbLookUp($user, $pwd);                        // invoke auth
@@ -35,7 +35,7 @@ class Authentication extends nAuthA {
         return self::$logInstance;
     }
 
-    private static function dbLookUp($user, $pwdtry) {
+    protected static function dbLookUp($user, $pwdtry) {
         // Using prepared statement to prevent SQL injection
         $sql = "select uid, password 
                 from user

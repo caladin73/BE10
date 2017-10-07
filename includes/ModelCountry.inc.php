@@ -1,5 +1,5 @@
 <?php
-require_once 'includes/dbparams.inc.php';
+require_once 'includes/DbP.inc.php';
 require_once 'includes/DbH.inc.php';
 require_once 'includes/ModelIf.inc.php';
 require_once 'includes/ModelA.inc.php';

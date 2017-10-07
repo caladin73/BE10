@@ -1,4 +1,5 @@
 <?php
+require_once 'DbP.inc.php';
 
 class DbH extends DbP {
     private static $instance = FALSE;
@@ -6,7 +7,7 @@ class DbH extends DbP {
 
     private function __construct() {
         try {
-            self::$dbh = new PDO(DSN, DBUSER, USERPWD);
+            self::$dbh = new PDO(DbP::DSN, DbP::DBUSER, DbP::USERPWD);
             self::$dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $e) {
             printf("<p>Connect failed for following reason: <br/>%s</p>\n",

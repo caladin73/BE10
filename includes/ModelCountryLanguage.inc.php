@@ -1,6 +1,6 @@
 <?php
 require_once 'includes/ModelA.inc.php';
-require_once 'includes/Country.inc.php';
+require_once 'includes/ModelCountry.inc.php';
 
 class CountryLanguage extends Model {
     private $country;

@@ -4,5 +4,5 @@ abstract class DbP {
     const DBUSER = 'nobody';
     const USERPWD = 'test';
     const DB = 'world';
-    const DSN = "mysql:host=".DBHOST.";dbname=".DB;
+    const DSN = "mysql:host=".self::DBHOST.";dbname=".self::DB;
 }
