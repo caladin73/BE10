@@ -1,17 +1,12 @@
 <?php
-/*
- * Login mechanism for educational purposes.
- * Experimental
- * Copyright nml, 2015-17
- */
-
 /**
- * Description of Authentication
- * Authentication is a Singleton, hence the private constructor.
- * It is instantiated by Authentication::authenticate()
+ * model/Authentication.inc.php
+ * @package MVCnA
  * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
  */
-require_once './includes/AuthA.inc.php';
+require_once './model/AuthA.inc.php';
 
 
 class Authentication extends AuthA {
@@ -39,7 +34,8 @@ class Authentication extends AuthA {
         // Using prepared statement to prevent SQL injection
         $sql = "select uid, password 
                 from user
-                where uid = :uid";
+                where uid = :uid
+                and activated = true;";
         $dbh = Model::connect();
         try {
             $q = $dbh->prepare($sql);

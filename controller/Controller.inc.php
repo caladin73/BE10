@@ -1,8 +1,12 @@
 <?php
-/*
- * This is a CONTROLLER
+/**
+ * controller/Controller.inc.php
+ * @package MVCnA
+ * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
  */
-require_once 'includes/ModelA.inc.php';
+require_once 'model/ModelA.inc.php';
 
 class Controller {
     private $model;

@@ -1,10 +1,12 @@
 <?php
 /**
- * Description of AuthA
- *
+ * model/AuthA.inc.php
+ * @package MVCnA
  * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
  */
-require_once 'AuthI.inc.php';
+require_once 'model/AuthI.inc.php';
 
 abstract class AuthA implements AuthI {
     protected static $sessvar = 'nAuth42'; // if set = logged on

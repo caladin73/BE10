@@ -1,5 +1,12 @@
 <?php
-require_once 'includes/View.inc.php';
+/**
+ * view/ViewUser.inc.php
+ * @package MVCnA
+ * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
+ */
+require_once 'view/View.inc.php';
 
 class UserView extends View {
     
@@ -12,7 +19,7 @@ class UserView extends View {
         $s = "<div class='haves'>";
         foreach ($users as $user) {
             $s .=  sprintf("%s<br/>\n"
-                , $user->getUid());
+                , $user);
         }
         $s .= "</div>";
         return $s;

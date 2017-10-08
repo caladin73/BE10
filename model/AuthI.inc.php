@@ -1,13 +1,10 @@
 <?php
-/*
- * Login mechanism for educational purposes.
- * Experimental
- * Copyright nml, 2015-17
- */
-
 /**
- * Interface for the login mechanism.
+ * model/AuthI.inc.php
+ * @package MVCnA
  * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
  */
 interface AuthI {
     public static function authenticate($user, $pwd);

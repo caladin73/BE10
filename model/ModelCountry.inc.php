@@ -1,8 +1,15 @@
 <?php
-require_once 'includes/DbP.inc.php';
-require_once 'includes/DbH.inc.php';
-require_once 'includes/ModelIf.inc.php';
-require_once 'includes/ModelA.inc.php';
+/**
+ * model/ModelCountry.inc.php
+ * @package MVCnA
+ * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
+ */
+require_once 'model/DbP.inc.php';
+require_once 'model/DbH.inc.php';
+require_once 'model/ModelIf.inc.php';
+require_once 'model/ModelA.inc.php';
 
 class Country extends Model implements ModelIf {
     private $code;

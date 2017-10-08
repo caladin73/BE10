@@ -1,8 +1,15 @@
 <?php
-require_once 'includes/DbH.inc.php';
-require_once 'includes/ModelIf.inc.php';
-require_once 'includes/ModelA.inc.php';
-require_once 'includes/Authentication.inc.php';
+/**
+ * model/ModelA.inc.php
+ * @package MVCnA
+ * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
+ */
+require_once 'model/DbH.inc.php';
+require_once 'model/ModelIf.inc.php';
+require_once 'model/ModelA.inc.php';
+require_once 'model/Authentication.inc.php';
 
 abstract class Model implements ModelIf {
     /*

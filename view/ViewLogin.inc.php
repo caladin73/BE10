@@ -1,6 +1,13 @@
 <?php
+/**
+ * view/ViewLogin.inc.php
+ * @package MVCnA
+ * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
+ */
 
-require_once 'includes/View.inc.php';
+require_once 'view/View.inc.php';
 
 class LoginView extends View {
     

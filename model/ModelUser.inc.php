@@ -1,16 +1,20 @@
 <?php
 /**
- * Description of User
- *
+ * includes/ModelUser.inc.php
+ * @package MVCnA
  * @author nml
+ * @copyright (c) 2017, nml
+ * @license http://www.fsf.org/licensing/ GPLv3
  */
 class User extends Model {
     private $uid;       // string
     private $password;  // string ll=128
+    private $activated;
     private $pwd;
     
-    public function __construct($uid) {
+    public function __construct($uid, $activated) {
         $this->uid = $uid;
+        $this->activated = $activated;
     }    
 
     public function setPwd($pwd) {
@@ -44,6 +48,10 @@ class User extends Model {
     public function update() { /*nop*/ }
     public function delete() { /*nop*/ }
     
+    public function __toString() {
+        return sprintf("%s%s", $this->uid, $this->activated ? '' : ', not activated');
+    }
+    
     public static function retrievem() {
         $users = array();
         $dbh = Model::connect();
@@ -66,8 +74,7 @@ class User extends Model {
     } 
 
         public static function createObject($a) {
-        $uid = $a['uid'];
-        $user = new User($uid);
+        $user = new User($a['uid'], $a['activated']);
         if (isset($a['pwd1'])) {
             $user->setPwd($a['pwd1']);
         }
