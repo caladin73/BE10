@@ -6,6 +6,10 @@ database.
 Database (mysql/mariahdb) may be created by the file
 worldsample.sql.
 
+To test it, please clone or download to a directory 
+within reach of your local web server. Install the 
+database, and start playing.
+
 Offered as is, no warranties, please read the licensing document.
 Please study release notes.
 
