@@ -121,8 +121,36 @@ class Country extends Model {
     }
 
     public function create() {
-        // your code goes here
+        $sql = sprintf("insert into country (code, name, continent, region, surfacearea, indepyear, population, lifeexpectancy, gnp, gnpold, localname, governmentform, headofstate, capital, code2) 
+                        values ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s')"
+                              , $this->getCode()
+                              , $this->getName()
+                              , $this->getContinent()
+                              , $this->getRegion()
+                              , $this->getSurfacearea()
+                              , $this->getIndepyear()
+                              , $this->getPopulation()
+                              , $this->getLifeexpectancy()
+                              , $this->getGnp()
+                              , $this->getGnpold()
+                              , $this->getLocalname()
+                              , $this->getGovernmentform()
+                              , $this->getHeadofstate()
+                              , $this->getCapital()
+                              , $this->getCode2());
+
+        $dbh = Model::connect();
+        try {
+            $q = $dbh->prepare($sql);
+            $q->execute();
+        } catch(PDOException $e) {
+            printf("<p>Insert failed: <br/>%s</p>\n",
+                $e->getMessage());
+        }
+        $dbh->query('commit');
     }
     public function update() {}
     public function delete() {}
+    
+    public static function createObject() {}
 }
