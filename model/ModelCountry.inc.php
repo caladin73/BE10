@@ -60,8 +60,64 @@ class Country extends Model {
         $this->code2 = $code2;
     }
 
+    public function getGnp() {
+        return $this->gnp;
+    }
+    
+    public function getRegion() {
+        return $this->region;
+    }
+
+    public function getContinent() {
+        return $this->continent;
+    }
+    
+    public function getGnpold() {
+        return $this->gnpold;
+    }
+    
+    public function getSurfacearea() {
+        return $this->surfacearea;
+    }
+    
+    public function getName() {
+        return $this->name;
+    }
+    
+    public function getLocalname() {
+        return $this->localname;
+    }
+    
+    public function getPopulation() {
+        return $this->population;
+    }
+    
+    public function getIndepyear() {
+        return $this->indepyear;
+    }
+    
+    public function getLifeexpectancy() {
+        return $this->lifeexpectancy;
+    }
+    
+    public function getGovernmentform() {
+        return $this->governmentform;
+    }
+    
+    public function getHeadofstate() {
+        return $this->headofstate;
+    }
+    
+    public function getCapital() {
+        return $this->capital;
+    }
+    
     public function getCode() {
         return $this->code;
+    }
+    
+    public function getCode2() {
+        return $this->code2;
     }
 
     public function create() {

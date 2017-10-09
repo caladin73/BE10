@@ -3,24 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/LICENSE.txt</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/AuthI.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/controller/Controller.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/view/ViewUser.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/ModelCity.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/index.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/view/ViewLanguage.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/Authentication.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/DbH.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/view/View.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/ModelCountry.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/view/ViewLogin.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/AuthA.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/ModelA.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/DbP.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/ModelCountryLanguage.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/model/ModelIf.inc.php</file>
-            <file>file:/home/nml/public_html/x15.dk/webdev/code/MVCnA/view/ViewCity.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCountryLanguage.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/controller/Controller.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCountry.inc.php</file>
         </group>
     </open-files>
 </project-private>
