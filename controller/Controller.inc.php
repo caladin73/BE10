@@ -49,6 +49,16 @@ class Controller {
         return;
     }
 
+    public function createCountry($p) {
+        if (isset($p) && count($p) > 0) {
+            $p['id'] = null; // augment array with dummy
+            $country = Country::createObject($p);  // object from array
+            $country->create();         // model method to insert into db
+            $p = array();
+        }
+        return;
+    }
+
     public function createUser($p) {
         if (isset($p) && count($p) > 0) {
             $p['id'] = null; // augment array with dummy
