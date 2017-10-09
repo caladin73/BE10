@@ -49,7 +49,16 @@
             $con->createLanguage($_POST);                  // activate controller
         }
         print($view1->display());
-        
+
+    } elseif (isset($_GET['f']) && $_GET['f'] === 'O') {
+        $model = new Country(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null); // init a model
+        $con = new Controller($model);                 // init controller
+        $view1 = new CountryView($model);                     // init a view
+        if (isset($_POST)) {
+            $con->Country($_POST);                  // activate controller
+        }
+        print($view1->display());
+
     } elseif (isset($_GET['f']) && $_GET['f'] === 'U') {
         $model = new User(null, null); // init a model
         $con = new Controller($model);              // init controller
