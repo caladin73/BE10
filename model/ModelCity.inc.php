@@ -50,7 +50,7 @@ class City extends Model {
 
     public function create() {
         $sql = sprintf("insert into city (name, countrycode, district, population) 
-                        values ('%s', '%s', '%s', %s)"
+                        values ('%s', '%s', '%s', '%s')"
                               , $this->getName()
                               , $this->getCountry()->getCode()
                               , $this->getDistrict()
