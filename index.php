@@ -15,6 +15,7 @@
     require_once './view/ViewUser.inc.php';
     require_once './view/ViewLogin.inc.php';
     require_once './controller/Controller.inc.php';
+    require_once './ModelCountry.inc.php';
 
     if (!isset($_GET['f']) || $_GET['f'] === 'A') {
         $model = new User(null, null);
