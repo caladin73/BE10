@@ -11,10 +11,38 @@ require_once 'model/DbH.inc.php';
 require_once 'model/ModelIf.inc.php';
 require_once 'model/ModelA.inc.php';
 
-class Country extends Model implements ModelIf {
+class Country extends Model {
+    private $gnp;
+    private $region;
+    private $continent;
+    private $gnpold;
+    private $surfacearea;
+    private $name;
+    private $localname;
+    private $population;
+    private $indepyear;
+    private $lifeexpectancy;
+    private $governmentform;
+    private $headofstate;
+    private $capital;
     private $code;
+    private $code2;
 
-    public function __construct($code) {
+    public function __construct($gnp, 
+                                $region, 
+                                $continent, 
+                                $gnpold, 
+                                $surfacearea, 
+                                $name, 
+                                $localname, 
+                                $population, 
+                                $indepyear, 
+                                $lifeexpectancy,
+                                $governmentform,
+                                $headofstate,
+                                $capital,
+                                $code,
+                                $code2) {
         $this->code = $code;
     }
 
