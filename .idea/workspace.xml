@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fc2c61-5563-4f1a-a288-471c9c82f302" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,7 +16,7 @@
       <file leaf-file-name="ModelCountry.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/model/ModelCountry.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="408">
               <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
               <folding />
             </state>
@@ -39,8 +38,8 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="70" column="2" lean-forward="true" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+            <state relative-caret-position="475">
+              <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -172,12 +171,12 @@
       <option name="presentableId" value="Default" />
       <updated>1507536838460</updated>
       <workItem from="1507536840583" duration="1668000" />
-      <workItem from="1507541025466" duration="3706000" />
+      <workItem from="1507541025466" duration="4027000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5374000" />
+    <option name="totallyTimeSpent" value="5695000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="1" width="1126" height="1096" extended-state="0" />
@@ -257,14 +256,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/model/ModelCountry.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/model/ModelA.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -283,10 +274,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/model/ModelCountry.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="70" column="2" lean-forward="true" selection-start-line="70" selection-start-column="2" selection-end-line="70" selection-end-column="2" />
+        <state relative-caret-position="475">
+          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding />
         </state>
       </provider>

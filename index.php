@@ -51,7 +51,7 @@
         print($view1->display());
 
     } elseif (isset($_GET['f']) && $_GET['f'] === 'O') {
-        $model = new Country('DNK', null, null, null, null, null, null, null, null, null, null, null, null, null, null); // init a model
+        $model = new Country(null, null, null, null, null, null, null, null, null, null, null, null, null, null, null); // init a model
         $con = new Controller($model);                 // init controller
         $view1 = new CountryView($model);                     // init a view
         if (isset($_POST)) {
