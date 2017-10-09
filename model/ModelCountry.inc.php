@@ -43,7 +43,21 @@ class Country extends Model {
                                 $capital,
                                 $code,
                                 $code2) {
+        $this->gnp = $gnp;
+        $this->region = $region;
+        $this->continent = $continent;
+        $this->gnpold = $gnpold;
+        $this->surfacearea = $surfacearea;
+        $this->name = $name;
+        $this->localname = $localname;
+        $this->population = $population;
+        $this->indepyear = $indepyear;
+        $this->lifeexpectancy = $lifeexpectancy;
+        $this->governmentform = $governmentform;
+        $this->headofstate = $headofstate;
+        $this->capital = $capital;
         $this->code = $code;
+        $this->code2 = $code2;
     }
 
     public function getCode() {
