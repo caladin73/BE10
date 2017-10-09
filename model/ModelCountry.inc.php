@@ -152,5 +152,26 @@ class Country extends Model {
     public function update() {}
     public function delete() {}
     
+    public static function retrievem() {
+        $countries = array();
+        $dbh = Model::connect();
+
+        $sql = "select *";
+        $sql .= " from country";
+        try {
+            $q = $dbh->prepare($sql);
+            $q->execute();
+            while ($row = $q->fetch()) {
+                $country = self::createObject($row);
+                array_push($countries, $country);
+            }
+        } catch(PDOException $e) {
+            printf("<p>Query failed: <br/>%s</p>\n",
+                $e->getMessage());
+        } finally {
+            return $countries;
+        }
+    } 
+    
     public static function createObject() {}
 }
