@@ -28,86 +28,84 @@ class Country extends Model {
     private $code;
     private $code2;
 
-    public function __construct($gnp, 
-                                $region, 
-                                $continent, 
-                                $gnpold, 
-                                $surfacearea, 
-                                $name, 
-                                $localname, 
-                                $population, 
-                                $indepyear, 
-                                $lifeexpectancy,
-                                $governmentform,
-                                $headofstate,
-                                $capital,
-                                $code,
-                                $code2) {
-        $this->gnp = $gnp;
-        $this->region = $region;
-        $this->continent = $continent;
-        $this->gnpold = $gnpold;
-        $this->surfacearea = $surfacearea;
-        $this->name = $name;
-        $this->localname = $localname;
-        $this->population = $population;
-        $this->indepyear = $indepyear;
-        $this->lifeexpectancy = $lifeexpectancy;
-        $this->governmentform = $governmentform;
-        $this->headofstate = $headofstate;
-        $this->capital = $capital;
+    public function __construct($code) {
         $this->code = $code;
-        $this->code2 = $code2;
     }
-
+    public function setGnp($gnp) {
+        $this->gnp = $gnp;
+    }
     public function getGnp() {
         return $this->gnp;
     }
-    
+    public function setRegion($region) {
+        $this->region = $region;
+    }
     public function getRegion() {
         return $this->region;
     }
-
+    public function setContinent($continent) {
+        $this->continent = $continent;
+    }
     public function getContinent() {
         return $this->continent;
     }
-    
+    public function setGnpold($gnpold) {
+        $this->gnpold = $gnpold;
+    }
     public function getGnpold() {
         return $this->gnpold;
     }
-    
+    public function setSurfacearea($surfacearea) {
+        $this->surfacearea = $surfacearea;
+    }
     public function getSurfacearea() {
         return $this->surfacearea;
     }
-    
+    public function setName($name) {
+        $this->name = $name;
+    }
     public function getName() {
         return $this->name;
     }
-    
+    public function setLocalname($localname) {
+        $this->localname = $localname;
+    }
     public function getLocalname() {
         return $this->localname;
     }
-    
+    public function setPopulation($population) {
+        $this->population = $population;
+    }
     public function getPopulation() {
         return $this->population;
     }
-    
+    public function setIndepyear($indepyear) {
+        $this->indepyear = $indepyear;
+    }
     public function getIndepyear() {
         return $this->indepyear;
     }
-    
+    public function setLifeexpectancy($lifeexpectancy) {
+        $this->lifeexpectancy = $lifeexpectancy;
+    }
     public function getLifeexpectancy() {
         return $this->lifeexpectancy;
     }
-    
+    public function setGovernmentform($governmentform) {
+        $this->governmentform = $governmentform;
+    }
     public function getGovernmentform() {
         return $this->governmentform;
     }
-    
+    public function setHeadofstate($headofstate) {
+        $this->headofstate = $headofstate;
+    }
     public function getHeadofstate() {
         return $this->headofstate;
     }
-    
+    public function setCapital($capital) {
+        $this->capital = $capital;
+    }
     public function getCapital() {
         return $this->capital;
     }
@@ -115,7 +113,9 @@ class Country extends Model {
     public function getCode() {
         return $this->code;
     }
-    
+    public function setCode2($code2) {
+        $this->code2 = $code2;
+    }
     public function getCode2() {
         return $this->code2;
     }
