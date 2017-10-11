@@ -45,9 +45,35 @@ class User extends Model {
         $dbh->query('commit');
     }
 
-    public function update() { /*nop*/ }
-    public function delete() { /*nop*/ }
-    
+    //activate user, can only be activated
+    public function update() {
+        $sql = "UPDATE user SET 'activated' = 1 WHERE uid = (:uid)";
+
+        $dbh = Model::connect();
+        try {
+            $q = $dbh->prepare($sql);
+            $q->execute();
+        } catch(PDOException $e) {
+            printf("<p>Insert of user failed: <br/>%s</p>\n",
+                $e->getMessage());
+        }
+        $dbh->query('commit');
+    }
+
+    //Delete user
+    public function delete() {
+        $sql = "DELETE FROM user WHERE uid = (:uid)";
+        $dbh = Model::connect();
+        try {
+            $q = $dbh->prepare($sql);
+            $q->execute();
+        } catch(PDOException $e) {
+            printf("<p>Insert of user failed: <br/>%s</p>\n",
+                $e->getMessage());
+        }
+        $dbh->query('commit');
+    }
+
     public function __toString() {
         return sprintf("%s%s", $this->uid, $this->activated ? '' : ', not activated');
     }
@@ -73,6 +99,7 @@ class User extends Model {
         }
     } 
 
+    /*  //auto activate turned off
         public static function createObject($a) {
         $user = new User($a['uid'], $a['activated']);
         if (isset($a['pwd1'])) {
@@ -80,4 +107,5 @@ class User extends Model {
         }
         return $user;
     }
+    */
 }
