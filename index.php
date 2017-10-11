@@ -11,11 +11,12 @@
     require_once './model/ModelCountryLanguage.inc.php'; // domainmodel
     require_once './model/ModelUser.inc.php'; // domainmodel
     require_once './view/ViewCity.inc.php';
+    require_once './view/ViewCountry.inc.php';
     require_once './view/ViewLanguage.inc.php';
     require_once './view/ViewUser.inc.php';
     require_once './view/ViewLogin.inc.php';
     require_once './controller/Controller.inc.php';
-//    require_once './ModelCountry.inc.php';
+    require_once './model/ModelCountry.inc.php';
 
     if (!isset($_GET['f']) || $_GET['f'] === 'A') {
         $model = new User(null, null);
@@ -56,7 +57,7 @@
         $con = new Controller($model);                 // init controller
         $view1 = new CountryView($model);                     // init a view
         if (isset($_POST)) {
-            $con->Country($_POST);                  // activate controller
+            $con->createCountry($_POST);                  // activate controller
         }
         print($view1->display());
 

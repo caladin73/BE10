@@ -4,8 +4,12 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCountryLanguage.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelA.inc.php</file>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/controller/Controller.inc.php</file>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCountry.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/view/ViewCity.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCity.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/index.php</file>
         </group>
     </open-files>
 </project-private>
