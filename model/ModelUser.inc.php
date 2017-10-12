@@ -27,6 +27,10 @@ class User extends Model {
     public function getUid() {
         return $this->uid;
     }
+    
+    public function getActivated() {
+        return $this->activated;
+    }
 
     public function create() {
         $sql = "insert into user (uid, password) 
@@ -54,7 +58,7 @@ class User extends Model {
         try {
             $q = $dbh->prepare($sql);
             $q->bindValue(':uid', $this->getUid());
-            $q->bindValue(':activated', $this->activated);
+            $q->bindValue(':activated', $this->getActivated());
             $q->execute();
         } catch(PDOException $e) {
             printf("<p>Insert of user failed: <br/>%s</p>\n",
