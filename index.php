@@ -69,5 +69,14 @@
             $con->createUser($_POST);               // activate controller
         }
         print($view1->display());
-    } 
+        
+    } elseif (isset($_GET['f']) && $_GET['f'] === 'Y') {
+        $model = new User(null, null); // init a model
+        $con = new Controller($model);              // init controller
+        $view1 = new UserView($model);                  // init a view
+        if (isset($_POST)) {
+            $con->updateUser($_POST);               // activate controller
+        }
+        print($view1->displayUpdate());
+    }
 ?>
