@@ -78,7 +78,7 @@ class User extends Model {
         return sprintf("%s%s", $this->uid, $this->activated ? '' : ', not activated');
     }
     
-    public static function retrievem() {
+    public static function retrieveU() {
         $users = array();
         $dbh = Model::connect();
 
@@ -97,6 +97,11 @@ class User extends Model {
         } finally {
             return $users;
         }
+
+
+
+
+
     } 
 
     /*  //auto activate turned off
