@@ -8,7 +8,7 @@
  */
 class User extends Model {
     private $uid;       // string
-    private $password;  // string ll=128
+    // private $password;  // string ll=128
     private $activated;
     private $pwd;
 
@@ -45,7 +45,22 @@ class User extends Model {
         $dbh->query('commit');
     }
 
-    public function update() { /*nop*/ }
+    public function update() { 
+        //activate user, can only be activated
+    
+        $sql = "UPDATE user SET 'activated' = 1 WHERE uid = (:uid)";
+
+        $dbh = Model::connect();
+        try {
+            $q = $dbh->prepare($sql);
+            $q->execute();
+        } catch(PDOException $e) {
+            printf("<p>Insert of user failed: <br/>%s</p>\n",
+                $e->getMessage());
+        }
+        $dbh->query('commit');
+        
+    }
     public function delete() { /*nop*/ }
 
     public function __toString() {
@@ -74,7 +89,8 @@ class User extends Model {
     }
 
     public static function createObject($a) {
-        $user = new User($a['uid'], $a['activated']);
+        $act = isset($a['activated']) ? $a['activated'] : null;
+        $user = new User($a['uid'], $act);
         if (isset($a['pwd1'])) {
             $user->setPwd($a['pwd1']);
         }
