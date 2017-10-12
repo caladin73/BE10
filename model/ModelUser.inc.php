@@ -49,7 +49,7 @@ class User extends Model {
     public function delete() { /*nop*/ }
 
     public function __toString() {
-        return sprintf("%s%s", $this->uid, $this->activated ? '' : ', not activated');
+        return sprintf("%s%s", $this->uid, $this->activated ? ', activated' : ', not activated');
     }
 
     public static function retrievem() {

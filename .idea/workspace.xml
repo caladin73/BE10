@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d2fc2c61-5563-4f1a-a288-471c9c82f302" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/model/ModelUser.inc.php" afterPath="$PROJECT_DIR$/model/ModelUser.inc.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -37,10 +38,10 @@
       <file leaf-file-name="ModelUser.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/model/ModelUser.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="65">
-              <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+            <state relative-caret-position="252">
+              <caret line="51" column="64" lean-forward="false" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
               <folding>
-                <marker date="1507796471251" expanded="true" signature="677:754" ph="insert into user... " />
+                <marker date="1507797948470" expanded="true" signature="677:754" ph="insert into user... " />
               </folding>
             </state>
           </provider>
@@ -254,12 +255,12 @@
       <workItem from="1507559012248" duration="74000" />
       <workItem from="1507747137739" duration="153000" />
       <workItem from="1507750015691" duration="1832000" />
-      <workItem from="1507795572433" duration="2011000" />
+      <workItem from="1507795572433" duration="2375000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17780000" />
+    <option name="totallyTimeSpent" value="18144000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -754,10 +755,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/model/ModelUser.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+        <state relative-caret-position="252">
+          <caret line="51" column="64" lean-forward="false" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
           <folding>
-            <marker date="1507796471251" expanded="true" signature="677:754" ph="insert into user... " />
+            <marker date="1507797948470" expanded="true" signature="677:754" ph="insert into user... " />
           </folding>
         </state>
       </provider>
