@@ -1,7 +1,7 @@
 <?php
 /**
  * includes/ModelUser.inc.php
- * @package MVCnA
+ * @package MVC_NML_Sample
  * @author nml
  * @copyright (c) 2017, nml
  * @license http://www.fsf.org/licensing/ GPLv3
@@ -11,11 +11,11 @@ class User extends Model {
     private $password;  // string ll=128
     private $activated;
     private $pwd;
-    
+
     public function __construct($uid, $activated) {
         $this->uid = $uid;
         $this->activated = $activated;
-    }    
+    }
 
     public function setPwd($pwd) {
         $this->pwd = $pwd;
@@ -23,7 +23,7 @@ class User extends Model {
     public function getPwd() {
         return $this->pwd;
     }
-    
+
     public function getUid() {
         return $this->uid;
     }
@@ -45,40 +45,14 @@ class User extends Model {
         $dbh->query('commit');
     }
 
-    //activate user, can only be activated
-    public function update() {
-        $sql = "UPDATE user SET 'activated' = 1 WHERE uid = (:uid)";
-
-        $dbh = Model::connect();
-        try {
-            $q = $dbh->prepare($sql);
-            $q->execute();
-        } catch(PDOException $e) {
-            printf("<p>Insert of user failed: <br/>%s</p>\n",
-                $e->getMessage());
-        }
-        $dbh->query('commit');
-    }
-
-    //Delete user
-    public function delete() {
-        $sql = "DELETE FROM user WHERE uid = (:uid)";
-        $dbh = Model::connect();
-        try {
-            $q = $dbh->prepare($sql);
-            $q->execute();
-        } catch(PDOException $e) {
-            printf("<p>Insert of user failed: <br/>%s</p>\n",
-                $e->getMessage());
-        }
-        $dbh->query('commit');
-    }
+    public function update() { /*nop*/ }
+    public function delete() { /*nop*/ }
 
     public function __toString() {
         return sprintf("%s%s", $this->uid, $this->activated ? '' : ', not activated');
     }
-    
-    public static function retrieveU() {
+
+    public static function retrievem() {
         $users = array();
         $dbh = Model::connect();
 
@@ -97,20 +71,13 @@ class User extends Model {
         } finally {
             return $users;
         }
+    }
 
-
-
-
-
-    } 
-
-    /*  //auto activate turned off
-        public static function createObject($a) {
-        $user = new User($a['uid'], $a['activated']);
+    public static function createObject($a) {
+        $user = new User($a['uid'], null);
         if (isset($a['pwd1'])) {
             $user->setPwd($a['pwd1']);
         }
         return $user;
     }
-    */
 }
