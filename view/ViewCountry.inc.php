@@ -16,7 +16,7 @@ class CountryView extends View {
     }
     
     private function displayManyCountries() {
-        $countries = Country::retrievem($this->model->getName()->getCode());
+        $countries = Country::retrieveCo();
         $s = "<div class='haves'>";
         foreach ($countries as $country) {
             $s .=  sprintf("%s: %s<br/>\n"
