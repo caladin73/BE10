@@ -56,6 +56,32 @@ class UserView extends View {
         $s .= "          </form>\n";
         return $s;
     }
+    
+    private function userUpdateForm() {
+        $s = sprintf("
+            <form action='%s?f=Y' method='post'>\n
+            <div class='gets'>\n
+                <h3>Create User</h3>\n
+                <p>\n
+                    Userid:<br/>
+                    <input type='text' name='uid'/>\n
+                </p>\n
+                <input type='radio' name='activated' value='1' checked> Activate<br>
+                <input type='radio' name='activated' value='0'> Deactivate<br>
+                <p>\n
+                    <input type='submit' value='Go'/>
+                </p>
+            </div>", $_SERVER['PHP_SELF']);
+                
+        if (!Model::areCookiesEnabled()) {
+            $s .= "<tr><td colspan='2' class='err'>Cookies 
+            from this domain must be 
+                      enabled before attempting login.</td></tr>";
+        }
+        $s .= "          </div>\n";
+        $s .= "          </form>\n";
+        return $s;
+    }
 
     private function displayUser() {
         $s = sprintf("<main class='main'>\n%s\n%s</main>\n"
@@ -64,8 +90,19 @@ class UserView extends View {
         return $s;
     }
     
+     private function displayUpdateUser() {
+        $s = sprintf("<main class='main'>\n%s\n%s</main>\n"
+                    , $this->displayul()
+                    , $this->userUpdateForm());
+        return $s;
+    }
+    
     public function display(){
        $this->output($this->displayUser());
+    }
+    
+     public function displayUpdate(){
+       $this->output($this->displayUpdateUser());
     }
     
 }

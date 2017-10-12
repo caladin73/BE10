@@ -49,7 +49,7 @@ abstract class View {
                 <li><a href='%s?f=C'>Cities</a></li>\n
                 <li><a href='%s?f=L'>Languages</a></li>\n
                 <li><a href='%s?f=O'>Countries</a></li>\n
-                <li><a href='%s?f=U'>Users</a></li>\n",
+                <li><a href='%s?f=Y'>Users</a></li>\n",
                 $_SERVER['PHP_SELF'], $_SERVER['PHP_SELF'], $_SERVER['PHP_SELF'], $_SERVER['PHP_SELF']);
         } else {
             $s .= sprintf("                <li><a href='%s?f=U'>Register User</a></li>\n",

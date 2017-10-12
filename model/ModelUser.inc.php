@@ -48,11 +48,13 @@ class User extends Model {
     public function update() { 
         //activate user, can only be activated
     
-        $sql = "UPDATE user SET 'activated' = 1 WHERE uid = (:uid)";
+        $sql = "UPDATE user SET activated = (:activated) WHERE uid = (:uid)";
 
         $dbh = Model::connect();
         try {
             $q = $dbh->prepare($sql);
+            $q->bindValue(':uid', $this->getUid());
+            $q->bindValue(':activated', $this->activated);
             $q->execute();
         } catch(PDOException $e) {
             printf("<p>Insert of user failed: <br/>%s</p>\n",
