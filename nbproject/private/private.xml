@@ -9,7 +9,9 @@
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCountry.inc.php</file>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/view/ViewCity.inc.php</file>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/model/ModelCity.inc.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/view/View.inc.php</file>
             <file>file:/C:/xampp/htdocs/MVC_NML_Sample/index.php</file>
+            <file>file:/C:/xampp/htdocs/MVC_NML_Sample/view/ViewCountry.inc.php</file>
         </group>
     </open-files>
 </project-private>

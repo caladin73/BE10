@@ -152,7 +152,7 @@ class Country extends Model {
     public function update() {}
     public function delete() {}
     
-    public static function retrievem() {
+    public static function retrieveCo() {
         $countries = array();
         $dbh = Model::connect();
 
@@ -173,5 +173,23 @@ class Country extends Model {
         }
     } 
     
-    public static function createObject() {}
+    public static function createObject($c) {
+        $country = new Country($c['code']);
+        $country->setName($c['name']);
+        $country->setContinent($c['continent']);
+        $country->setRegion($c['region']);
+        $country->setSurfacearea($c['surfacearea']);
+        $country->setIndepyear($c['indepyear']);
+        $country->setPopulation($c['population']);
+        $country->setLifeexpectancy($c['lifeexpectancy']);
+        $country->setGnp($c['gnp']);
+        $country->setGnpold($c['gnpold']);
+        $country->setLocalname($c['localname']);
+        $country->setGovernmentform($c['governmentform']);
+        $country->setHeadofstate($c['headofstate']);
+        $country->setCapital($c['capital']);
+        $country->setCode2($c['code2']);
+
+        return $country;
+    }
 }
