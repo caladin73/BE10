@@ -74,7 +74,7 @@ class User extends Model {
     }
 
     public static function createObject($a) {
-        $user = new User($a['uid'], null);
+        $user = new User($a['uid'], $a['activated']);
         if (isset($a['pwd1'])) {
             $user->setPwd($a['pwd1']);
         }
