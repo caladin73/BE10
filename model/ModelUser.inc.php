@@ -98,11 +98,12 @@ class User extends Model {
             return $users;
         }
 
-
-
-
-
-    } 
+        public static function createObject($u) {
+            $uid = $u['uid'];
+            $ = new user($uid);
+            return $bruger;
+        }
+    }
 
     /*  //auto activate turned off
         public static function createObject($a) {
