@@ -15,7 +15,7 @@ class UserView extends View {
     }
 
     private function displayul() {
-        $users = User::retrieveU();
+        $users = User::retrievem();
         $s = "<div class='haves'>";
         foreach ($users as $user) {
             $s .=  sprintf("%s<br/>\n"
