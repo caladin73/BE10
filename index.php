@@ -75,6 +75,16 @@
         $con = new Controller($model);              // init controller
         $view1 = new UserView($model);                  // init a view
         if (isset($_POST)) {
+            $con->activateUser($_POST);               // activate controller
+        }
+        print($view1->displayUpdate());
+    }
+    
+    elseif (isset($_GET['f']) && $_GET['f'] === 'V') {
+        $model = new User(null, null); // init a model
+        $con = new Controller($model);              // init controller
+        $view1 = new UserView($model);                  // init a view
+        if (isset($_POST)) {
             $con->updateUser($_POST);               // activate controller
         }
         print($view1->displayUpdate());

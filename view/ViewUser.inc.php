@@ -57,11 +57,11 @@ class UserView extends View {
         return $s;
     }
     
-    private function userUpdateForm() {
+    private function userActivateForm() {
         $s = sprintf("
             <form action='%s?f=Y' method='post'>\n
             <div class='gets'>\n
-                <h3>Create User</h3>\n
+                <h3>Activate User</h3>\n
                 <p>\n
                     Userid:<br/>
                     <input type='text' name='uid'/>\n
@@ -83,6 +83,35 @@ class UserView extends View {
         return $s;
     }
 
+    private function userUpdateForm() {
+        $s = sprintf("
+            <form action='%s?f=V' method='post'>\n
+            <div class='gets'>\n
+                <h3>Update User</h3>\n
+                <p>\n
+                    Userid:<br/>
+                    <input type='text' name='uid'/>\n
+                </p>\n
+                <p>\n
+                    Password:<br/>
+                    <input type='password' name='pwd'/>\n
+                </p>\n
+                <p>\n
+                    <input type='submit' value='Go'/>
+                </p>
+            </div>", $_SERVER['PHP_SELF']);
+                
+        if (!Model::areCookiesEnabled()) {
+            $s .= "<tr><td colspan='2' class='err'>Cookies 
+            from this domain must be 
+                      enabled before attempting login.</td></tr>";
+        }
+        $s .= "          </div>\n";
+        $s .= "          </form>\n";
+        return $s;
+    }
+
+    
     private function displayUser() {
         $s = sprintf("<main class='main'>\n%s\n%s</main>\n"
                     , $this->displayul()
@@ -91,8 +120,9 @@ class UserView extends View {
     }
     
      private function displayUpdateUser() {
-        $s = sprintf("<main class='main'>\n%s\n%s</main>\n"
+        $s = sprintf("<main class='main'>\n%s\n%s\n%s</main>\n"
                     , $this->displayul()
+                    , $this->userActivateForm()
                     , $this->userUpdateForm());
         return $s;
     }

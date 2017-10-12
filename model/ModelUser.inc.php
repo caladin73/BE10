@@ -8,7 +8,7 @@
  */
 class User extends Model {
     private $uid;       // string
-    // private $password;  // string ll=128
+    private $password;  // string ll=128
     private $activated;
     private $pwd;
 
@@ -22,6 +22,9 @@ class User extends Model {
     }
     public function getPwd() {
         return $this->pwd;
+    }
+    public function getPassword() {
+        return $this->password;
     }
 
     public function getUid() {
@@ -49,7 +52,7 @@ class User extends Model {
         $dbh->query('commit');
     }
 
-    public function update() { 
+    public function activate() { 
         //activate user, can only be activated
     
         $sql = "UPDATE user SET activated = (:activated) WHERE uid = (:uid)";
@@ -59,6 +62,8 @@ class User extends Model {
             $q = $dbh->prepare($sql);
             $q->bindValue(':uid', $this->getUid());
             $q->bindValue(':activated', $this->getActivated());
+            var_dump($q);
+            die();
             $q->execute();
         } catch(PDOException $e) {
             printf("<p>Insert of user failed: <br/>%s</p>\n",
@@ -67,6 +72,32 @@ class User extends Model {
         $dbh->query('commit');
         
     }
+    
+    public function update() { 
+        //Update user password
+    
+        if(':password'!=''){
+            $x = "password = '". password_hash(':password', PASSWORD_DEFAULT)."'";
+        } else {
+            $x = '';
+        }
+        
+        $sql = "UPDATE user SET password = (:password) WHERE uid = (:uid)";
+
+        $dbh = Model::connect();
+        try {
+            $q = $dbh->prepare($sql);
+            $q->bindValue(':uid', $this->getUid());
+            $q->bindValue(':password', password_hash($_POST['pwd'], PASSWORD_DEFAULT));
+            $q->execute();
+        } catch(PDOException $e) {
+            printf("<p>Insert of user failed: <br/>%s</p>\n",
+                $e->getMessage());
+        }
+        $dbh->query('commit');
+        
+    }
+    
     public function delete() { /*nop*/ }
 
     public function __toString() {

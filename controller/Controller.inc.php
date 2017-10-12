@@ -69,6 +69,16 @@ class Controller {
         return;
     }
     
+    public function activateUser($p) {
+        if (isset($p) && count($p) > 0) {
+            $p['id'] = null; // augment array with dummy
+            $user = User::createObject($p);  // object from array
+            $user->activate();         // model method to insert into db
+            $p = array();
+        }
+        return;
+    }
+    
     public function updateUser($p) {
         if (isset($p) && count($p) > 0) {
             $p['id'] = null; // augment array with dummy
