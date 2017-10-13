@@ -62,8 +62,6 @@ class User extends Model {
             $q = $dbh->prepare($sql);
             $q->bindValue(':uid', $this->getUid());
             $q->bindValue(':activated', $this->getActivated());
-            var_dump($q);
-            die();
             $q->execute();
         } catch(PDOException $e) {
             printf("<p>Insert of user failed: <br/>%s</p>\n",
